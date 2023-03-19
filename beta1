@@ -79,43 +79,19 @@ local function MakeDraggable(topbarobject, object)
 		Tween:Play()
 	end
 
-	topbarobject.InputBegan:Connect(
-		function(input)
-			if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
-				Dragging = true
-				DragStart = input.Position
-				StartPosition = object.Position
+	topbarobject.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+			Dragging = true
+			DragStart = input.Position
+			StartPosition = object.Position
 
-				input.Changed:Connect(
-					function()
-						if input.UserInputState == Enum.UserInputState.End then
-							Dragging = false
-						end
-					end
-				)
-			end
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					Dragging = false
+				end
+			end)
 		end
-	)
-
-	topbarobject.InputChanged:Connect(
-		function(input)
-			if
-				input.UserInputType == Enum.UserInputType.MouseMovement or
-				input.UserInputType == Enum.UserInputType.Touch
-			then
-				DragInput = input
-			end
-		end
-	)
-
-	UserInputService.InputChanged:Connect(
-		function(input)
-			if input == DragInput and Dragging then
-				Update(input)
-			end
-		end
-	)
-end
+	end)
 
 local Update = {}
 
