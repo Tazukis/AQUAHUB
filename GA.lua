@@ -33,7 +33,7 @@ local ThunderImageUI = Instance.new("ImageLabel")
         ThunderImageUI.BorderSizePixel = 0
         ThunderImageUI.Position = UDim2.new(0.0, 0, 0.0, 0)
         ThunderImageUI.Size = UDim2.new(0, 50, 0, 50)
-        ThunderImageUI.Image = "http://www.roblox.com/asset/?id=12609719637"
+        ThunderImageUI.Image = "http://www.roblox.com/asset/?id=4364968297"
 
 if game:GetService("CoreGui"):FindFirstChild("SOME X GUI") then
 	game:GetService("CoreGui"):FindFirstChild("SOME X GUI"):Destroy()
@@ -128,7 +128,7 @@ function Update:Window(text,logo,keybind)
   local yoo = string.gsub(tostring(keybind),"Enum.KeyCode.","")
   
   local SOMEXHUB = Instance.new("ScreenGui")
-  SOMEXHUB.Name = "sazx hub"
+  SOMEXHUB.Name = "AQUA HUB"
   SOMEXHUB.Parent = game.CoreGui
   SOMEXHUB.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
@@ -1094,7 +1094,7 @@ elseif placeId == 7449423635 then
   Three_World = true
 end
 
-local Library = Update:Window("sazx hub ","",Enum.KeyCode.RightControl);
+local Library = Update:Window("AQUA HUB ","",Enum.KeyCode.RightControl);
 local AutoFarm = Library:Tab("AutoFarm")
 local Auto = Library:Tab("Auto")
 local Stats = Library:Tab("Stats")
